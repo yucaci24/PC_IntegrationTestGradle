@@ -23,7 +23,7 @@ pipeline {
     stage('Checkout') {
         steps{
             echo "------------>Checkout<------------"
-            git branch: '${BRANCH_NAME}', credentialsId: 'GitHub_yucaci24', url: 'https://github.com/yucaci24/PruebaConcepto_Multibranch'
+            git branch: 'master', credentialsId: 'GitHub_yucaci24', url: 'https://github.com/yucaci24/PruebaConcepto_Multibranch'
             sh 'gradle clean'
         }
     }
