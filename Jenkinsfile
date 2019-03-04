@@ -11,8 +11,8 @@ pipeline {
   
   //A section defining tools to auto-install and put on the PATH
   tools {
-    jdk 'JDK8_Centos'
-    gradle 'Gradle4.5_Centos'
+    jdk 'JDK8'
+    gradle 'Gradle4.5'
   }
   
   triggers {
@@ -23,7 +23,7 @@ pipeline {
     stage('Checkout') {
         steps{
             echo "------------>Checkout<------------"
-            git branch: 'master', credentialsId: 'GitHub_yucaci24', url: 'https://github.com/yucaci24/PruebaConcepto_Multibranch'
+            git branch: 'master', credentialsId: 'GitHub_yucaci24', url: 'https://github.com/yucaci24/PC_IntegrationTestGradle'
             sh 'gradle clean'
         }
     }
