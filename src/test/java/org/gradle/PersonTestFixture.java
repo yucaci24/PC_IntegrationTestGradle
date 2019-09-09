@@ -13,6 +13,6 @@ public class PersonTestFixture {
     @Test
     public void canConstructAPersonWithAName() {
         Person person = new Person("Larry");
-        assertEquals("Peter", person.getName());
+        assertEquals("Larry", person.getName());
     }
 }
