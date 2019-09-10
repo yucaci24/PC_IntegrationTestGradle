@@ -27,4 +27,11 @@ public class PersonIntegrationTest {
         properties.load(getClass().getResourceAsStream("inttest.properties"));
         assertEquals("value", properties.getProperty("int.test.prop"));
     }
+    
+    @Test
+    public void resourcesAreAvailableInClasspath1() throws Exception {
+        Properties properties = new Properties();
+        properties.load(getClass().getResourceAsStream("inttest.properties"));
+        assertEquals("value", properties.getProperty("int.test.prop"));
+    }
 }
