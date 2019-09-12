@@ -18,7 +18,7 @@ public class PersonIntegrationTest {
         assertTrue(jarFile.isFile());
 
         Person person = PersonTestFixture.create("Larry");
-        assertEquals("Larry", person.getName());
+        assertEquals("Peter", person.getName());
     }
     
     @Test
