@@ -17,26 +17,12 @@ public class PersonIntegrationTest {
         File jarFile = new File(System.getProperty("jar.path"));
         assertTrue(jarFile.isFile());
 
-        Person person = PersonTestFixture.create("Peter");
-        assertEquals("Peter", person.getName());
+        Person person = PersonTestFixture.create("Larry");
+        assertEquals("Larry", person.getName());
     }
     
     @Test
     public void resourcesAreAvailableInClasspath() throws Exception {
-        Properties properties = new Properties();
-        properties.load(getClass().getResourceAsStream("inttest.properties"));
-        assertEquals("value", properties.getProperty("int.test.prop"));
-    }
-    
-    @Test
-    public void resourcesAreAvailableInClasspath1() throws Exception {
-        Properties properties = new Properties();
-        properties.load(getClass().getResourceAsStream("inttest.properties"));
-        assertEquals("value", properties.getProperty("int.test.prop"));
-    }
-    
-    @Test
-    public void resourcesAreAvailableInClasspath2() throws Exception {
         Properties properties = new Properties();
         properties.load(getClass().getResourceAsStream("inttest.properties"));
         assertEquals("value", properties.getProperty("int.test.prop"));
