@@ -14,7 +14,7 @@ sourceSets {
 }
 
 dependencies {
-    implementation 'arus:pagosPSE:1.0'
+    implementation 'arus:pagosPSE:1.0@jar'
     testImplementation 'junit:junit:4.12'
     integrationTestImplementation 'commons-collections:commons-collections:3.2.2'
     integrationTestImplementation sourceSets.main.output
