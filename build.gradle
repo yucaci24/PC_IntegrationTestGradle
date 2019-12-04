@@ -1,7 +1,9 @@
 apply plugin: 'java'
 
 repositories {
-    mavenCentral()
+    maven{
+        url "https://binary.ceiba.com.co/repository/maven-public/"
+    }
 }
 
 sourceSets {
@@ -12,6 +14,7 @@ sourceSets {
 }
 
 dependencies {
+    implementation 'arus:pagosPSE:1.0'
     testImplementation 'junit:junit:4.12'
     integrationTestImplementation 'commons-collections:commons-collections:3.2.2'
     integrationTestImplementation sourceSets.main.output
